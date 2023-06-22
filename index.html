@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <title>Wiki-api</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="logo">
+            <img src="img/logo_wikipedia.png" alt="Wikipedia Logo">
+        </div>
+        <div class="title">
+            <h3 class="title__text">Wikipedia API</h3>
+        </div>
+        <div class="search">
+            <input type="text" id="search-text" class="search__text" placeholder="Buscar en Wikipedia" onkeyup="handleKeyPress(event)">
+            <button type="button" id="btn" class="btn" value="btn" title="btn" onclick="obtenerTexto()">
+                <i class="fas fa-search"></i>
+            </button>
+            
+        </div>
+    </div>
+    <div class="cards" id="cards">
+    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/axios.js"></script>
+</body>
+</html>
