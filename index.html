@@ -17,12 +17,15 @@
         <div class="title">
             <h3 class="title__text">Wikipedia API</h3>
         </div>
+        
         <div class="search">
             <input type="text" id="search-text" class="search__text" placeholder="Buscar en Wikipedia" onkeyup="handleKeyPress(event)">
             <button type="button" id="btn" class="btn" value="btn" title="btn" onclick="obtenerTexto()">
                 <i class="fas fa-search"></i>
             </button>
-            
+        </div>
+        <div id="error" class="error">
+            <p id="errorMensaje" class="error__mensaje"></p>
         </div>
     </div>
     <div class="cards" id="cards">

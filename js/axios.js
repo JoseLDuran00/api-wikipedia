@@ -7,9 +7,11 @@ handleKeyPress = (event) => {
 }
 
 const obtenerTexto = () => {
- const inputText = document.getElementById('search-text').value;
- 
- // Definir los parámetros
+const inputText = document.getElementById('search-text').value;
+document.getElementById('error').style.display = 'none';
+const regex = /^[a-zA-Z0-9 ]*$/;
+if (regex.test(inputText)){
+   // Definir los parámetros
 const url = 'https://es.wikipedia.org/w/api.php';
 const params = {
   action: 'query',
@@ -49,5 +51,12 @@ const params = {
     }
   }
 
-  obtenerData();
+obtenerData();
+
+}else{
+  console.log('texto ingresado no válido');
+  document.getElementById('error').style.display = 'block';
+  document.getElementById('errorMensaje').innerHTML='<span>❌</span> El texto ingresado no es válido, por favor ingrese un nuevo texto. 🦉';
+}
+
 }
