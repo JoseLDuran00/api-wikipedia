@@ -47,14 +47,13 @@
 }
 
 .cards{
-    margin: 10px auto;
+    margin: 20px ;
     padding: 10px;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     border:  1px solid rgba(192, 190, 190, 0.502);
-    /* box-shadow: 0px 0px 5px gray; */
     border-radius: 5px;
 }
 
@@ -90,5 +89,4 @@
     text-decoration: none;
     border-radius: 10px;
     text-align: center;
-
 }

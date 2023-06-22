@@ -3,7 +3,7 @@ handleKeyPress = (event) => {
   if (event.keyCode === 13) {
     event.preventDefault();
     obtenerTexto();
-}
+  }
 }
 
 const obtenerTexto = () => {
@@ -29,18 +29,9 @@ const params = {
       if(respuesta.status === 200){
         console.log('Conectado ! ')
 
-        // console.log(respuesta)
-        // console.log(respuesta.data.query.search)
-        // console.log(respuesta.data.query.search[0].snippet)
-        // console.log(`https://es.wikipedia.org/?curid=${respuesta.data.query.search[0].pageid}`)
-
         let articulos = '';
         respuesta.data.query.search.forEach((articulo,index) => {
-          console.log('------------------------------------------------')
-          console.log(articulo.title);
-          console.log(articulo.snippet);
-          console.log(`https://es.wikipedia.org/?curid=${respuesta.data.query.search[index].pageid}`);
-          console.log('------------------------------------------------')
+
           let link = `https://es.wikipedia.org/?curid=${respuesta.data.query.search[index].pageid}`;
           articulos+=`
             <article class="cards__card">
