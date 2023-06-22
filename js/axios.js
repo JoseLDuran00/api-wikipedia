@@ -8,8 +8,8 @@ handleKeyPress = (event) => {
 
 const obtenerTexto = () => {
  const inputText = document.getElementById('search-text').value;
-  
-// Definir los parámetros
+ 
+ // Definir los parámetros
 const url = 'https://es.wikipedia.org/w/api.php';
 const params = {
   action: 'query',

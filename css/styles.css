@@ -53,7 +53,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border:  1px solid rgba(192, 190, 190, 0.502);
     border-radius: 5px;
 }
 
