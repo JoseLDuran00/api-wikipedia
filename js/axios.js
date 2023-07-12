@@ -18,8 +18,6 @@ const params = {
   list : 'search',
   srsearch: inputText,
   format: 'json',
-  prop : 'info | extracts',
-  inprop: 'url',
   origin: '*'
 };
 
@@ -34,9 +32,13 @@ const params = {
         let articulos = '';
         respuesta.data.query.search.forEach((articulo,index) => {
 
-          let link = `https://es.wikipedia.org/?curid=${respuesta.data.query.search[index].pageid}`;
+          // obtenemos  el título, reemplazamos espacios en blanco por guíon bajo.
+          titulo = articulo.title.split(" ").join("_") 
+
+          //let link = `https://es.wikipedia.org/?curid=${respuesta.data.query.search[index].pageid}`;
+          let link = `https://es.wikipedia.org/wiki/${titulo}`
           articulos+=`
-            <article class="cards__card">
+            <article class="card cards__card">
               <h3 class="card__title" id="card-title">${articulo.title}</h3>
               <p class="card__content" id="card-content">${articulo.snippet}</p>
               <a href="${link}" target="_blank" class="card__link" id="card-link">Más información </a>
